@@ -1,0 +1,1 @@
+# All the screenshot files will get output here
