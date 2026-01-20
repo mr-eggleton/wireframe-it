@@ -45,6 +45,18 @@ wireframe-it https://example.com --offline  # strips remote CSS/JS if you need a
 wireframe-it https://www.utcsheffield.org.uk --force  # refresh a cached UTC Sheffield wireframe
 ```
 
+### Run as a module
+
+You can also invoke the CLI via the module entrypoint:
+
+```bash
+python -m wireframe_it https://example.com
+```
+
+Notes:
+- When running from a cloned repo that uses a `src/` layout, make sure the package is discoverable. Either install in editable mode (`pip install -e .`) or set `PYTHONPATH=src` for ad‑hoc runs.
+- The module entry prints the same help as the `wireframe-it` console script: `python -m wireframe_it --help`.
+
 ## Example outputs (UTC wireframes)
 
 Sample previews captured at common breakpoints for UTC-related pages (click to view full size, visit source for original):
