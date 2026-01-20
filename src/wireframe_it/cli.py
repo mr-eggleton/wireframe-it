@@ -14,7 +14,7 @@ app = typer.Typer(help="Generate wireframe placeholders and screenshots from a U
 @app.command()
 def url(
     target: str = typer.Argument(..., help="URL to fetch and wireframe"),
-    output: Path = typer.Option(Path("outputs"), "--output", "-o", help="Output directory"),
+    output: Path = typer.Option(Path("wireframes"), "--output", "-o", help="Output directory"),
     browser: str = typer.Option(
         "chromium",
         "--browser",

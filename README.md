@@ -7,10 +7,10 @@ CLI and library to convert live web pages into wireframe-style HTML and PNG scre
 ```bash
 pip install wireframe-it
 playwright install chromium  # or msedge if you prefer
-wireframe-it https://example.com
+wireframe-it https://pypi.org/
 ```
 
-This writes `outputs/example.com/wireframe.html` plus three screenshots: desktop, tablet, and mobile. Re-run with `--force` to regenerate the wireframe even if a cached `wireframe.html` already exists.
+This writes `wireframes/pypi.org/wireframe.html` plus three screenshots: desktop, tablet, and mobile. Re-run with `--force` to regenerate the wireframe even if a cached `wireframe.html` already exists.
 
 ## How it works
 
@@ -28,7 +28,7 @@ This writes `outputs/example.com/wireframe.html` plus three screenshots: desktop
 wireframe-it <url> [options]
 
 Options:
-	-o, --output PATH     Output folder (default: outputs)
+	-o, --output PATH     Output folder (default: wireframes)
 	--browser TEXT        chromium | msedge (default: chromium)
 	--screenshots / --no-screenshots  Capture PNGs (default: on)
 	--keep-remote-assets / --offline Keep remote CSS/JS (default) or strip for offline preview
@@ -39,7 +39,7 @@ Options:
 Examples:
 
 ```bash
-wireframe-it https://www.bhf.org.uk -o outputs
+wireframe-it https://www.bhf.org.uk -o output
 wireframe-it https://example.com --browser msedge --no-screenshots
 wireframe-it https://example.com --offline  # strips remote CSS/JS if you need a fully self-contained wireframe
 wireframe-it https://www.utcsheffield.org.uk --force  # refresh a cached UTC Sheffield wireframe
@@ -50,12 +50,12 @@ wireframe-it https://www.utcsheffield.org.uk --force  # refresh a cached UTC She
 Sample previews captured at common breakpoints for UTC-related pages (click to view full size, visit source for original):
 
 - Desktop (1280×720) — [UTC Sheffield website](https://www.utcsheffield.org.uk):  
-  <a href="outputs/www.utcsheffield.org.uk/www.utcsheffield.org.uk-desktop.png">
+  <a href="www.utcsheffield.org.uk-desktop.png">
     <img src="www.utcsheffield.org.uk-desktop.png" alt="UTC desktop wireframe" width="260" />
   </a>
 
 - Mobile (390×844) — [UTC Sheffield GitHub Pages](https://utcsheffield.github.io):  
-  <a href="outputs/utcsheffield.github.io/utcsheffield.github.io-mobile.png">
+  <a href="utcsheffield.github.io-mobile.png">
     <img src="utcsheffield.github.io-mobile.png" alt="UTC mobile wireframe" width="180" />
   </a>
 
