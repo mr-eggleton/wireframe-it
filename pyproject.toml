@@ -4,7 +4,7 @@ build-backend = "hatchling.build"
 
 [project]
 name = "wireframe-it"
-version = "0.1.0"
+version = "0.1.1"
 description = "Convert live web pages to wireframe placeholders and screenshots"
 readme = "README.md"
 authors = [{ name = "mr-eggleton" }]
